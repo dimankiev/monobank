@@ -6,7 +6,7 @@ class Header extends React.Component {
 
   render() {
     return (
-      <h3 className="text-light">monobank API Client v.0.1.0 Beta (by dimankiev)</h3>
+      <h3 className="text-light">monobank API Client v.0.2.0 Beta (by dimankiev)</h3>
     )
   }
 }
