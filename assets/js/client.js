@@ -47,7 +47,9 @@ class monoClient {
 	    } else if (clientInfo_saved !== false) {
 	      this.clientInfo = clientInfo_saved;
 				resolve(this.clientInfo);
-	    }
+	    } else {
+				resolve(this.clientInfo);
+			}
 		})
   }
 	updateRates() {
