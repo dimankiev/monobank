@@ -58,7 +58,7 @@ class monoClient {
 			let lastUpdate = localStorage.getItem("currenciesLastUpdate");
 			if (typeof decodedCurrencies !== 'undefined' && decodedCurrencies !== null) { decodedCurrencies = JSON.parse(decodedCurrencies); } else { decodedCurrencies = false; }
 			if (typeof lastUpdate !== 'undefined' && lastUpdate !== null) { lastUpdate = Number(lastUpdate); } else { lastUpdate = false; }
-			if ((lastUpdate == false && decodedCurrencies == false) || (lastUpdate > 30)) {
+			if ((lastUpdate == false && decodedCurrencies == false) || (Math.round(new Date().getTime() / 1000) - lastUpdate > 30)) {
 				axios.get("https://api.monobank.ua/bank/currency").then((response => {
 					let currencies = {};
 					if (response.status == 200) {
