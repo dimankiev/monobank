@@ -44,7 +44,7 @@ class monoClient {
 						resolve(errorAnswer);
 					}
 	      });
-	    } else if (clientInfo_saved !== false) {
+	    } else if (clientInfo_saved !== false && clientInfo_saved !== null) {
 	      this.clientInfo = clientInfo_saved;
 				resolve(this.clientInfo);
 	    } else {
