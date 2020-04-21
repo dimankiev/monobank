@@ -14,7 +14,7 @@ class ApiKeySettings extends React.Component {
   constructor(props) {
     super(props);
     let apiKey = localStorage.getItem('apiKey');
-    this.state = {value: typeof apiKey !== 'undefined' ? apiKey : '', hide: false}
+    this.state = {value: typeof apiKey !== 'undefined' && apiKey !== null ? apiKey : '', hide: false}
     this.handleChange = this.handleChange.bind(this);
     this.handleHide = this.handleHide.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
