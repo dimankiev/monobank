@@ -1,0 +1,77 @@
+body {
+  background: #111111;
+}
+
+.text-light {
+  color: rgba(235,235,235,0.99);
+  font-family: 'Product Sans';
+}
+
+#accounts {
+  max-width: 450px;
+  /* margin: 0 auto; */
+  display: grid;
+  grid-gap: 1rem;
+}
+
+/* Screen larger than 600px? 2 column */
+@media (min-width: 600px) {
+  #accounts { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Screen larger than 900px? 3 columns */
+@media (min-width: 900px) {
+  #accounts { grid-template-columns: repeat(3, 1fr); }
+}
+.blackCard {
+  background: #212121;
+  background: -moz-linear-gradient(202deg, rgba(0,0,0,1) 32%, rgba(60,60,60,1) 100%);
+  background: -webkit-linear-gradient(202deg, rgba(0,0,0,1) 32%, rgba(60,60,60,1) 100%);
+  background: linear-gradient(202deg, rgba(0,0,0,1) 32%, rgba(60,60,60,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#3c3c3c",GradientType=1);
+  color: rgba(235,235,235,0.9);
+}
+.whiteCard {
+  background: rgb(203,203,203);
+  background: -moz-linear-gradient(197deg, rgba(203,203,203,1) 32%, rgba(215,213,213,1) 61%, rgba(208,208,208,1) 100%);
+  background: -webkit-linear-gradient(197deg, rgba(203,203,203,1) 32%, rgba(215,213,213,1) 61%, rgba(208,208,208,1) 100%);
+  background: linear-gradient(197deg, rgba(203,203,203,1) 32%, rgba(215,213,213,1) 61%, rgba(208,208,208,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#cbcbcb",endColorstr="#d0d0d0",GradientType=1);
+  color: #212121;
+}
+.bankCard {
+  font-family: monospace;
+  padding: 7px;
+  margin-top: 5px;
+  border-radius: 4px;
+  min-height: 96px;
+  min-width: 232px;
+  max-width: 232px;
+  overflow: auto;
+  display: block;
+}
+.bankCard > .cardNumber {
+  font-size: 12pt;
+  margin: 19px 0 0 15px;
+  display: block;
+  position: absolute;
+}
+.bankCard > .cardCreditLimit {
+  font-size: 10pt;
+  margin: 50px 0 0 15px;
+  display: block;
+  position: absolute;
+}
+.bankCard > .cardBalance {
+  font-size: 10pt;
+  margin: 72px 0 0 15px;
+  display: block;
+  position: absolute;
+}
+.bankCard > .cardCurrency {
+  font-size: 10pt;
+  margin: 4px 0 0 204px;
+  float: right;
+  display: block;
+  position: absolute;
+}
