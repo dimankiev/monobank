@@ -6,7 +6,7 @@ class Header extends React.Component {
 
   render() {
     return (
-      <h3 className="text-light">monobank API Client v.0.2.0 Beta (by dimankiev)</h3>
+      <h3 className="text-light">monobank API Client v.0.2.2 Beta (by dimankiev)</h3>
     )
   }
 }
@@ -43,7 +43,7 @@ class ApiKeySettings extends React.Component {
 }
 
 class Dashboard extends React.Component {
-	constructor(props) {
+  constructor(props) {
     super(props);
     this.state = {client: monoInstance.clientInfo, secondsPassed: 0, rates: monoInstance.currencies};
     this.compareCardBalances = this.compareCardBalances.bind(this);
@@ -57,7 +57,7 @@ class Dashboard extends React.Component {
   }
 
   componentWillUnmount() {
-  	clearInterval(this.timerID);
+    clearInterval(this.timerID);
     clearInterval(this.counterID);
   }
 
